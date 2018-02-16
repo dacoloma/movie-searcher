@@ -10,7 +10,9 @@ class SearchMovie
 
   def result
     log_in
-    Tmdb::Movie.find(@movie)
+    #if !@movie.length >2
+        Tmdb::Movie.find(@movie)
+    #end
   end
 
 end
