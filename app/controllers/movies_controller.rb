@@ -13,6 +13,7 @@ class MoviesController < ApplicationController
       new_uri
       redirect_to root_path
     else
+      flash[:danger] = 'Search cannot be empty'
       redirect_to root_path
     end
 

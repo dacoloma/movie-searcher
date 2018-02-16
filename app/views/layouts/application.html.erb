@@ -13,6 +13,9 @@
     <main role="main">
       <div class="album py-5 bg-light">
         <div class="container">
+          <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
           <%= yield %>
         </div>
       </div>
